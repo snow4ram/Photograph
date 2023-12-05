@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+</head>
+<body>
+<div id = "image_save">
+    <form action="list.html" th:action method="post" enctype="multipart/form-data">
+
+        <label for="item_name">이름을 입력해주세요</label>
+        <input type="text" name="name" id="item_name">
+
+        <label for="item_file">이미지를 선택하세요:</label>
+        <input type="file" name="file" id="item_file" accept="image/*">
+        <input type="submit" value="업로드">
+
+    </form>
+</div>
+<!--<script th:inline="javascript" type="text/javascript">-->
+<!--    const save = document.getElementById("image_save");-->
+
+<!--    save.addEventListener("submit" , (e) =>{-->
+
+<!--    })-->
+<!--</script>-->
+</body>
+</html>

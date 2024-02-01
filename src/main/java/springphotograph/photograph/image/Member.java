@@ -2,18 +2,16 @@ package springphotograph.photograph.image;
 
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Getter
 @Entity
 @ToString
-@NoArgsConstructor
-public class User {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +19,7 @@ public class User {
 
     private String name;
 
-    @OneToMany(mappedBy = "user")
-    private List<Image> images;
-
-    public User(String name) {
+    public Member(String name) {
         this.name = name;
     }
 }
